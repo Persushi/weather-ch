@@ -6,7 +6,7 @@ var router = express.Router();
 //lo correcto es modularizar por servicios, etc
 
 router.get('/location', async function (req, res) {
-    const ip = await publicIpv4()
+    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress;
     // para facilitar la operación para conseguir la ip pública se descargó la libreria que internamente hace una consulta
     // http para obtener la ip, al hacer los testeos en local usaría la ip privada con lo que no es posible consultar
     // al servicio para conseguir la dirección desde donde se consulta
