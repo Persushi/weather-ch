@@ -6,6 +6,7 @@ const app = express();
 dotenv.config()
 
 app.use("/v1", indexRouter)
-app.listen(3000, () => {
-    console.log("El servidor está inicializado en el puerto 3000");
+const server = app.listen(process.env.PORT || 5000, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
 });
