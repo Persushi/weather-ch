@@ -27,10 +27,10 @@ Endpoints
 https://ch-personal.herokuapp.com/v1/location
 Devuelve los datos de ubicación city según ip-api.
 
-https://ch-personal.herokuapp.com/v1/current /city *parametro opcional
+https://ch-personal.herokuapp.com/v1/current/city *parametro opcional
 City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación actual según
 ip-api y el estado del tiempo actual.
 
-https://ch-personal.herokuapp.com/v1/forecast /city *parametro opcional
+https://ch-personal.herokuapp.com/v1/forecast/city *parametro opcional
 City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación actual según
 ip-api y el estado del tiempo a 5 días 
